@@ -1,0 +1,155 @@
+/* Variáveis de tema */
+:root {
+  --bg-white: #ffffff;
+  --bg-light: #f8f9fa;
+  --border: #dee2e6;
+  --text-primary: #343a40;
+  --text-secondary: #6c757d;
+
+  --status-pendente: #ffc107;
+  --status-feito:    #28a745;
+  --status-andamento:#17a2b8;
+  --status-ativo:    #007bff;
+  --status-inativo:  #6c757d;
+
+  --radius: 6px;
+  --gap: 1rem;
+}
+
+/* Container geral */
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Títulos */
+h2, h3 {
+  margin: 1.5rem 0 1rem;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.3rem;
+}
+
+/* Formulário */
+form {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--gap);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: var(--gap);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-light);
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--text-primary);
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.6rem;
+  background: var(--text-primary);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #23272b;
+}
+
+/* Filtro de status */
+.select-filter {
+  margin-bottom: var(--gap);
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-light);
+}
+
+/* Cards de itens */
+.item-card {
+  display: flex;
+  align-items: flex-start;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--gap);
+  margin-bottom: var(--gap);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.item-content {
+  flex: 1;
+}
+
+.item-content strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.item-content em {
+  font-style: normal;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.item-content p {
+  margin: 0.5rem 0;
+  color: var(--text-secondary);
+}
+
+/* Badge de status */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-pendente  { background: var(--status-pendente);  }
+.status-feito     { background: var(--status-feito);     }
+.status-andamento { background: var(--status-andamento); }
+.status-ativo     { background: var(--status-ativo);     }
+.status-inativo   { background: var(--status-inativo);   }
+
+/* Imagem */
+.item-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-left: var(--gap);
+}
